@@ -61,7 +61,7 @@ def flat_accuracy(preds, labels):
 
 def Extract_Headlines():
     #Open Sarcasm JSON File
-    f = open ('Sarcasm_Headlines_Dataset_v2.json', "r") 
+    f = open ('Sarcasm_Headlines_Dataset_v2 copy.json', "r") 
     data = json.loads(f.read()) 
     f.close()
     labels = [] # list of correct labels
@@ -183,7 +183,7 @@ def Run_Model(device, batch_size, num_epochs, learningrate=2e-5):
             tr_loss += loss.item()
             nb_tr_examples += b_input_ids.size(0)
             nb_tr_steps += 1
-        print("train losss: {}".format(tr_loss/nb_tr_steps))
+        print(" train losss: {}".format(tr_loss/nb_tr_steps))
         #plot training loss
         plt.figure(figsize=(15,8))
         plt.title("Training loss")
